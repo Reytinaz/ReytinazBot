@@ -87,4 +87,4 @@ async def math(inter, num1: int, oper: str, num2: int):
 
 # LOGIN
 
-bot.run("MTEzNjk0ODQ3NTMzNTAxNjU0OA.G6O7qy.5L0qltg2pyeomOtZXSIJ87A_hZmhCn3yN0nlfk")
+bot.run("MTEzNjk0ODQ3NTMzNTAxNjU0OA.G86sa7.8wuRHSpg-7lZJP39H98sBg-3hUfNYjyLL5jhGs")
