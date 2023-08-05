@@ -1,1 +1,0 @@
-worker: Python work.py
