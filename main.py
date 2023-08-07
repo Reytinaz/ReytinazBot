@@ -1,5 +1,6 @@
 import disnake
 import dotenv
+import os
 
 from disnake.ext import commands
 
@@ -111,4 +112,4 @@ async def math(inter, number_1: int, operation: str="+", number_2: int=None):
 # LOGIN
 
 
-bot.run(dotenv.get_key(dotenv_path=".env", key_to_get="TOKEN", encoding=None))
+bot.run(os.environ["TOKEN"])
