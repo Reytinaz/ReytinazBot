@@ -3,31 +3,26 @@
 
 name: bothost
 
-on:
-  push:
-    branches: [ "Reytinazs-Bot" ]
-  pull_request:
-    branches: [ "Reytinazs-Bot" ]
-
-permissions:
-  contents: read
+on: [push]
 
 jobs:
   build:
 
     runs-on: ubuntu-latest
+    
+    strategy:
+      # You can use PyPy versions in python-version.
+      # For example, pypy2.7 and pypy3.9
+      matrix:
+        python-version: ["2.7", "3.7", "3.8", "3.9", "3.10", "3.11"]
 
     steps:
-    - uses: actions/checkout@v3
-    - name: Set up Python 3.11
-      uses: actions/setup-python@v3
+    - uses: actions/checkout@v4
+    - name: Set up Python ${{ matrix.python-version }}
+      uses: actions/setup-python@v4
       with:
-        python-version: "3.11"
-    - name: Install dependencies
-      run: |
-        python -m pip install --upgrade pip
-        pip install flake8 pytest
-        if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
-    - name: Test with pytest
+        python-version: ${{ matrix.python-version }}
+    # You can test your matrix by printing the current Python version
+    - name: test my bot
       run: |
         python main.py
