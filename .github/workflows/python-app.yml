@@ -30,9 +30,8 @@ jobs:
         flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
     - name: Install Modules
       run: |
-        import disnake
-        import dotenv
-        import os
+        pip install git+https://github.com/DisnakeDev/disnake.git
+        pip install git+https://github.com/motdotla/dotenv.git
     - name: Run Bots Code
       run: |
         pytest main.py
