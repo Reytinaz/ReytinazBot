@@ -26,6 +26,8 @@ async def on_member_join(member):
 
     await channel.send(embed=embed)
 
+    print(f"{member.name} has joined!")
+
 @bot.event
 async def on_message(message):
     await bot.process_commands(message=message)
@@ -34,7 +36,7 @@ async def on_message(message):
         if msg.lower() == "вау":
             await message.channel.send(f"даа согласен с тобой {message.author.mention}"),
         elif msg.lower() == "нахуй":
-            await message.channel.send(f"{message.author.mention} сама")
+            await message.channel.send(f"{message.author.mention}/\/\/\/")
 
 
 @bot.event
@@ -104,7 +106,7 @@ async def math(inter, number_1: int, operation: str="+", number_2: int=None):
         result = number_1 + number_2,
     elif operation == "-":
         result = number_1 + number_2,
-    await inter.send(str(result))
+    await inter.send(result)
 
 
 # LOGIN
