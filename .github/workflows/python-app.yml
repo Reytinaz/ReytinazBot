@@ -31,7 +31,6 @@ jobs:
     - name: Install Modules
       run: |
         pip install git+https://github.com/DisnakeDev/disnake.git
-        pip install git+https://github.com/motdotla/dotenv.git
     - name: Run Bots Code
       run: |
         pytest main.py
