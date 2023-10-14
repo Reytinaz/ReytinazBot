@@ -111,5 +111,10 @@ async def math(inter, number_1: int, operation: str="+", number_2: int=None):
 
 # LOGIN
 
-bot.run("MTEzNjk0ODQ3NTMzNTAxNjU0OA.G58vow._z0faYYHWk0V6ZMMaZLjWtf4JTET-w32CkB1l8")
-print("Logged To Reytinaz's Bot!")
+def login_to_Bot():
+    bot.run("MTEzNjk0ODQ3NTMzNTAxNjU0OA.G58vow._z0faYYHWk0V6ZMMaZLjWtf4JTET-w32CkB1l8")
+    print("Logged To Reytinaz's Bot!")
+
+corou = login_to_Bot()
+corou.__next__()
+corou.close()
