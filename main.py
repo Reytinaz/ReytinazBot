@@ -14,7 +14,7 @@ async def on_ready():
 @bot.event
 async def on_member_join(member):
     role = disnake.utils.get(member.guild.roles, id=1100105165756973057)
-    channel = bot.get_channel(1099389415677247551) #member.guild.system_channel
+    channel = member.guild.system_channel
 
     embed = disnake.Embed(
         title=f"hello noob {member.mention}",
@@ -111,10 +111,4 @@ async def math(inter, number_1: int, operation: str="+", number_2: int=None):
 
 # LOGIN
 
-def login_to_Bot():
-    bot.run("MTEzNjk0ODQ3NTMzNTAxNjU0OA.G58vow._z0faYYHWk0V6ZMMaZLjWtf4JTET-w32CkB1l8")
-    print("Logged To Reytinaz's Bot!")
-
-corou = login_to_Bot()
-corou.__next__()
-corou.close()
+bot.run("MTEzNjk0ODQ3NTMzNTAxNjU0OA.G58vow._z0faYYHWk0V6ZMMaZLjWtf4JTET-w32CkB1l8")
