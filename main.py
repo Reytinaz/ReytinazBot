@@ -111,7 +111,7 @@ async def math(inter, number_1: int, operation: str="+", number_2: int=None):
 
 # LOGIN
 
-async def log_to_bot():
+def log_to_bot():
     bot.run("MTEzNjk0ODQ3NTMzNTAxNjU0OA.G58vow._z0faYYHWk0V6ZMMaZLjWtf4JTET-w32CkB1l8")
     return True
 
