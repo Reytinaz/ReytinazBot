@@ -7,6 +7,11 @@ from disnake.ext import commands
 bot = commands.Bot(command_prefix="!", help_command=None, intents=disnake.Intents.all(), test_guilds=[1099389415169720431])
 channelToAnswer = bot.get_channel(1099389415677247551)
 
+def send_log():
+    f = open("logs/log.txt", "w")
+    f.write("test " + f.name)
+    f.close()
+
 @bot.event 
 async def on_ready():
     print(f"Bot {bot.user} is online!")
