@@ -24,7 +24,7 @@ jobs:
     - name: Install Modules
       run: |
         pip install git+https://github.com/DisnakeDev/disnake.git
-        pip install git+https://github.com/uptimerobot/uptimerobot-cli
+        pip install git+https://github.com/django/django?ysclid=loihlj819f252133122
     - name: Run Bots Code
       run: python main.py
    
