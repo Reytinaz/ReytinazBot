@@ -6,6 +6,10 @@ name: bothost
 on: 
   workflow_dispatch:
 
+
+env:
+  bot_token: ${{ secrets.BOT_TOKEN }}
+
 jobs:
   build:
 
