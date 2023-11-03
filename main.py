@@ -5,7 +5,6 @@ from disnake.ext import commands
 
 bot = commands.Bot(command_prefix="!", help_command=None, intents=disnake.Intents.all(), test_guilds=[1099389415169720431])
 channelToAnswer = bot.get_channel(1099389415677247551)
-bots_token = os.environ["bot_token"]
 
 @bot.event 
 async def on_ready():
@@ -113,12 +112,4 @@ async def math(inter, number_1: int, operation: str="+", number_2: int=None):
 
 # LOGIN
 
-def log_to_bot():
-    bot.run(bots_token)
-    return True
-
-result = log_to_bot()
-if result:
-    print("succefuly logged to bot!")
-else:
-    print("somethink happened")
+bot.run(os.environ["bot_token"])
