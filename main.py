@@ -117,5 +117,5 @@ async def login():
     await bot.run(os.environ["bot_token"])
 
 
-keep_alive()
 login()
+keep_alive()
