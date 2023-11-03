@@ -14,6 +14,7 @@
 #  t = Thread(target=run)
 #  t.start()
 from flask import Flask
+from gevent.pywsgi import WSGIServer
 
 app = Flask(__name__)
 
@@ -21,6 +22,7 @@ app = Flask(__name__)
 def hello_world():
     return "<p>Hello World</p>"
 
-if __name__ == "__main__":
-    from waitress import serve
-    serve(app, host="0.0.0.0", port=8080)
+
+if __name__ == '__main__':
+    http_server = WSGIServer(("127.0.0.1", 8080), app)
+    http_server.serve_forever()
