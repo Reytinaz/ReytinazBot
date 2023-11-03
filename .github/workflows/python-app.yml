@@ -30,7 +30,7 @@ jobs:
     - name: Install Modules
       run: |
         pip install git+https://github.com/DisnakeDev/disnake.git
-        pip install git+https://github.com/django/django?ysclid=loihlj819f252133122
+        pip install git+https://github.com/django/django.git
 
     - name: Run Bots Code
       run: python main.py
