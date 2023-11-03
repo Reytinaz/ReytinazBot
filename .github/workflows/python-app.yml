@@ -32,8 +32,8 @@ jobs:
         pip install git+https://github.com/DisnakeDev/disnake.git
         pip install git+https://github.com/pallets/flask.git
 
-    - name: Run Web Frame
-      run: python app.py
+    #- name: Run Web Frame
+    #  run: python app.py
 
     - name: Run Bots Code
       run: python main.py
