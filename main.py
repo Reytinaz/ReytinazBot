@@ -1,6 +1,5 @@
 import disnake
 import os
-import django
 
 from disnake.ext import commands
 
