@@ -112,11 +112,12 @@ async def math(inter, number_1: int, operation: str="+", number_2: int=None):
 
 # LOGIN
 
-def login():
+async def login(a):
     bot.run(os.environ["bot_token"])
+    await a
 
 
-login()
+login(True)
 
 from app import keep_alive
 keep_alive()
