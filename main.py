@@ -5,7 +5,7 @@ from disnake.ext import commands
 
 bot = commands.Bot(command_prefix="!", help_command=None, intents=disnake.Intents.all(), test_guilds=[1099389415169720431])
 channelToAnswer = bot.get_channel(1099389415677247551)
-bots_token = os.environ["TOKEN"]
+bots_token = os.environ["token"]
 
 @bot.event 
 async def on_ready():
