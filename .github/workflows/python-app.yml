@@ -31,7 +31,8 @@ jobs:
       run: |
         pip install git+https://github.com/DisnakeDev/disnake.git
         pip install git+https://github.com/pallets/flask.git
-        pip install git+https://github.com/Pylons/waitress.git
+        pip install git+https://github.com/gevent/gevent.git
+   #    pip install git+https://github.com/Pylons/waitress.git
 
     - name: Run Web Frame
       run: python app.py
