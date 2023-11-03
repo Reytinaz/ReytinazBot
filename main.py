@@ -2,6 +2,7 @@ import disnake
 import os
 
 from disnake.ext import commands
+#from app import keep_alive
 
 bot = commands.Bot(command_prefix="!", help_command=None, intents=disnake.Intents.all(), test_guilds=[1099389415169720431])
 channelToAnswer = bot.get_channel(1099389415677247551)
@@ -112,12 +113,6 @@ async def math(inter, number_1: int, operation: str="+", number_2: int=None):
 
 # LOGIN
 
-async def login():
-    bot.run(os.environ["bot_token"])
-    await True
+#keep_alive()
 
-
-log = login()
-
-from app import keep_alive
-keep_alive()
+bot.run(os.environ["bot_token"])
