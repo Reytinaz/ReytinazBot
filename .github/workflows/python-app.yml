@@ -6,7 +6,6 @@ name: bothost
 on: 
   workflow_dispatch:
 
-
 env:
   bot_token: ${{ secrets.BOT_TOKEN }}
 
@@ -21,10 +20,15 @@ jobs:
       uses: actions/setup-python@v3
       with:
         python-version: "3.11"
+
+    - name: Install New Pip
+      run: python.exe -m pip install --upgrade pip
+
     - name: Install Modules
       run: |
         pip install git+https://github.com/DisnakeDev/disnake.git
         pip install git+https://github.com/django/django?ysclid=loihlj819f252133122
+
     - name: Run Bots Code
       run: python main.py
    
